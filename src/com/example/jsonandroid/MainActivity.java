@@ -122,16 +122,15 @@ public class MainActivity extends Activity {
 							   result = jresponse.get("message").toString();
 							   if(result.contains("失败"))
 							   {
-								 AlertDialog.Builder builder=new Builder(MainActivity.this);
-								 builder.setTitle("提示")
-								 .setMessage(result)
-								 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-									
-									@Override
-									public void onClick(DialogInterface dialog, int which) {
-										dialog.dismiss();
-									}
-								}).create().show();
+								   	AlertDialog.Builder builder=new Builder(MainActivity.this);
+								   	builder.setTitle("提示")
+								   		   .setMessage(result)
+								           .setPositiveButton("确定", new DialogInterface.OnClickListener() {									
+								        	   @Override
+								        	   public void onClick(DialogInterface dialog, int which) {
+								        		   dialog.dismiss();
+								        	   }
+								           }).create().show();
 							   }
 							   else
 							   {
